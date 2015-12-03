@@ -465,6 +465,27 @@ void keyPressed() {
       break;
      }
   }
+   if(key==' '){
+      isShooting[j]=true;
+      for(int j=0; j<5; j++){
+  //    bullet[j][0]-=5;
+ //     bullet[j][0]=bulletX;
+ //     bullet[j][1]=bulletY;
+      bullet[j][0]=fighterX;
+      bullet[j][1]=fighterY+5;
+   //   j=j%5;
+      }
+    } if(key==' '){
+      isShooting[j]=true;
+      for(int j=0; j<5; j++){
+  //    bullet[j][0]-=5;
+ //     bullet[j][0]=bulletX;
+ //     bullet[j][1]=bulletY;
+      bullet[j][0]=fighterX;
+      bullet[j][1]=fighterY+5;
+   //   j=j%5;
+      }
+    }
  }
 
 void keyReleased() {
@@ -484,17 +505,7 @@ void keyReleased() {
       break;
     }
   }
-  if(key==' '){
-      isShooting[j]=true;
-      for(int j=0; j<5; j++){
-  //    bullet[j][0]-=5;
- //     bullet[j][0]=bulletX;
- //     bullet[j][1]=bulletY;
-      bullet[j][0]=fighterX;
-      bullet[j][1]=fighterY+5;
-   //   j=j%5;
-      }
-    }
+ 
 }
 
 void scoreChange(int value){
