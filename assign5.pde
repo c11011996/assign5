@@ -107,7 +107,6 @@ void draw() {
     for(int j=0; j<5; j++){
       if (isShooting[j]){
         bullet[j][0]-=5;
-   //     j++;
         bulletX = bullet[j][0];
         bulletY = bullet[j][1];
         image(shoot[j],bulletX,bulletY);
