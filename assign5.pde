@@ -438,6 +438,7 @@ void draw() {
         enemyState = STRAIGHT;
         enemyX=0;
         enemyY = floor(random(50, 360));
+        score=0;
         for(int i=0; i<12; i++){
          hit[i] = true;
          isShooting[i] = false;
