@@ -131,8 +131,8 @@ void draw() {
                }
                //bullet detection
                  if(isShooting[i]){
-                   if(bulletX <= enemyX-enemyXY[i]*enemyW+enemyW && bulletX+bulletW>=enemyX-enemyXY[i]*enemyW){
-                     if(bulletY+bulletH>=enemyY && bulletY<=enemyY+enemyH){
+                   if(bullet[j][0] <= enemyX-enemyXY[i]*enemyW+enemyW && bullet[j][0]+bulletW>=enemyX-enemyXY[i]*enemyW){
+                     if(bullet[j][1]+bulletH>=enemyY && bullet[j][1]<=enemyY+enemyH){
                        hit[i] = false;
                        boom[i] = true;
                        isShooting[i] = false;
@@ -182,8 +182,8 @@ void draw() {
                }
                //bullet detection
                  if(isShooting[i]){
-                   if(bulletX <= enemyX-enemyXY[i]*enemyW+enemyW && bulletX+bulletW>=enemyX-enemyXY[i]*enemyW){
-                     if(bulletY+bulletH>=enemyY+enemyXY[i]*enemyH && bulletY<=enemyY+enemyXY[i]*enemyH+enemyH){
+                   if(bullet[j][0] <= enemyX-enemyXY[i]*enemyW+enemyW && bullet[j][0]+bulletW>=enemyX-enemyXY[i]*enemyW){
+                     if(bullet[j][1]+bulletH>=enemyY+enemyXY[i]*enemyH && bullet[j][1]<=enemyY+enemyXY[i]*enemyH+enemyH){
                        hit[i] = false;
                        boom[i] = true;
                        isShooting[i] = false;
@@ -233,8 +233,8 @@ void draw() {
                  }
                  //bullet detection
                  if(isShooting[i]){
-                   if(bulletX <= enemyX-enemyXY[i]*enemyW+enemyW && bulletX+bulletW>=enemyX-enemyXY[i]*enemyW){
-                     if(bulletY+bulletH>=enemyY-enemyXY[i]*enemyH && bulletY<=enemyY-enemyXY[i]*enemyH+enemyH){
+                   if(bullet[j][0] <= enemyX-enemyXY[i]*enemyW+enemyW && bullet[j][0]+bulletW>=enemyX-enemyXY[i]*enemyW){
+                     if(bullet[j][1]+bulletH>=enemyY-enemyXY[i]*enemyH && bullet[j][1]<=enemyY-enemyXY[i]*enemyH+enemyH){
                        hit[i] = false;
                        boom[i] = true;
                        isShooting[i] = false;
@@ -272,8 +272,8 @@ void draw() {
                  }
                  //bullet detection
                  if(isShooting[i]){
-                   if(bulletX <= enemyX-enemyXY[i]*enemyW+enemyW && bulletX+bulletW>=enemyX-enemyXY[i]*enemyW){
-                     if(bulletY+bulletH>=enemyY+enemyXY[i]*enemyH && bulletY<=enemyY+enemyXY[i]*enemyH+enemyH){
+                   if(bullet[j][0] <= enemyX-enemyXY[i]*enemyW+enemyW && bullet[j][0]+bulletW>=enemyX-enemyXY[i]*enemyW){
+                     if(bullet[j][1]+bulletH>=enemyY+enemyXY[i]*enemyH && bullet[j][1]<=enemyY+enemyXY[i]*enemyH+enemyH){
                        hit[i] = false;
                        boom[i] = true;
                        isShooting[i] = false;
@@ -311,8 +311,8 @@ void draw() {
                  }
                  //bullet detection
                  if(isShooting[i]){
-                   if(bulletX <= enemyX-(4-enemyXY[i])*enemyW+enemyW && bulletX+bulletW>=enemyX-(4-enemyXY[i])*enemyW){
-                     if(bulletY+bulletH>=enemyY-enemyXY[i]*enemyH && bulletY<=enemyY-enemyXY[i]*enemyH+enemyH){
+                   if(bullet[j][0]<= enemyX-(4-enemyXY[i])*enemyW+enemyW && bullet[j][0]+bulletW>=enemyX-(4-enemyXY[i])*enemyW){
+                     if(bullet[j][1]+bulletH>=enemyY-enemyXY[i]*enemyH && bullet[j][1]<=enemyY-enemyXY[i]*enemyH+enemyH){
                        hit[i] = false;
                        boom[i] = true;
                        isShooting[i] = false;
@@ -350,8 +350,8 @@ void draw() {
                  }
                  //bullet detection
                  if(isShooting[i]){
-                   if(bulletX <= enemyX-(4-enemyXY[i])*enemyW+enemyW && bulletX+bulletW>=enemyX-(4-enemyXY[i])*enemyW){
-                     if(bulletY+bulletH>=enemyY+enemyXY[i]*enemyH && bulletY<=enemyY+enemyXY[i]*enemyH+enemyH){
+                   if(bullet[j][0]<= enemyX-(4-enemyXY[i])*enemyW+enemyW && bullet[j][0]+bulletW>=enemyX-(4-enemyXY[i])*enemyW){
+                     if(bullet[j][1]+bulletH>=enemyY+enemyXY[i]*enemyH && bullet[j][1]<=enemyY+enemyXY[i]*enemyH+enemyH){
                        hit[i] = false;
                        boom[i] = true;
                        isShooting[i] = false;
@@ -466,15 +466,13 @@ void keyPressed() {
      }
   }
      if(key==' '){
-      isShooting[j]=true;
-      bullet[j][0]-=5;
- //     bullet[j][0]=bulletX;
- //     bullet[j][1]=bulletY;
+        isShooting[j]=true;
+        bullet[j][0]-=5;
         bullet[j][0]=fighterX;
         bullet[j][1]=fighterY+5;
         j++;
         j=j%5;
-      }
+     }
  }
 
 void keyReleased() {
