@@ -104,12 +104,12 @@ void draw() {
     fill(255, 0, 0, 240);
     rect(10, 3, hp1, 18); 
     image(hp, 5, 1);
-    for(int j=0; j<5; j++){
-      if (isShooting[j]){
-        bullet[j][0]-=5;
-        bulletX = bullet[j][0];
-        bulletY = bullet[j][1];
-        image(shoot[j],bulletX,bulletY);
+    for(int k=0; k<5; k++){
+      if (isShooting[k]){
+        bullet[k][0]-=5;
+        bulletX = bullet[k][0];
+        bulletY = bullet[k][1];
+        image(shoot[k],bulletX,bulletY);
      }
     }
     int f = floor((currentFrame++)/6%5);
